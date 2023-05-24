@@ -26,6 +26,7 @@
           - result.data.name is defined
           - result.data.name == "cron test"
           - result.uuid is defined
+          - result.data.resume_url | regex_search("^http.*")
 
     - name: Set a fact for the check
       ansible.builtin.set_fact:
